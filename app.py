@@ -28,7 +28,7 @@ def generate_response(user_input):
 
 # Streamlit app
 def main():
-    st.title("AutoAssistant BOT")
+    st.title("Car Servicing Assistant")
     user_input = st.text_input("Enter your question:")
     if st.button("Submit"):
         try:
