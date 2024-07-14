@@ -20,7 +20,7 @@ except:
 
     def generate_response(user_input):
         # Create a chat completion
-        response = openai.ChatCompletion.create(
+        response = openai.chat.completions.create(
             model="gpt-3.5-turbo",  # Use "gpt-4" for GPT-4
             messages=[
                 {"role": "user", "content": user_input}
@@ -33,6 +33,6 @@ except:
     st.title("Car Servicing Assistant")
 
     user_input = st.text_input("Enter your question:")
-    if user_input:
+    if st.button("Submit"):
         response = generate_response(user_input)
-        st.write(response)
+        st.write( response)
