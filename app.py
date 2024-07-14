@@ -35,4 +35,4 @@ except:
     user_input = st.text_input("Enter your question:")
     if st.button("Submit"):
         response = generate_response(user_input)
-        st.write("ChatGPT response:", response)
+        st.write( response)
