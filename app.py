@@ -32,7 +32,7 @@ def main():
     user_input = st.text_input("Enter your question:")
     if st.button("Submit"):
         try:
-            results = run_flow_from_json("CSA Robot.json", input_value=user_input)
+            results = run_flow_from_json("CSA_Robot.json", input_value=user_input)
             st.write("Flow Results:", results)
         except Exception as e:
             response = generate_response(user_input)
